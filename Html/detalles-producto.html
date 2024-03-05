@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <title>Detalles del producto</title>
+    <style>
+        :root {
+            --white: #ffffff;
+            --black: #000000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field:#f7f7f7;
+            --hospital-green: #acd9b2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+        }
+        aside {
+            width: 360px;
+            position: absolute;
+            right: 0;
+        }
+        aside .cerrar {
+            text-align: center;
+            height: 18px;
+            width: 18px;
+            position: absolute;
+            z-index: 2;
+            top: 12px;
+            left: 12px;
+            background-color: var(--white);
+            border-radius: 50%;
+        }
+        aside .cerrar:hover {
+            cursor: pointer;
+        }
+        aside .img-producto {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            border-radius: 0 0 24px 24px;
+            
+        }
+        aside .informacion {
+            margin-left: 12px;
+        }
+        aside .informacion p:nth-child(1){
+            font-weight: bold;
+            font-size: var(--md);
+            margin-bottom: 0;
+        }
+        aside .informacion p:nth-child(2){
+            margin-top: 0;
+            font-size: var(--md);
+            color: var(--very-light-pink);
+        }
+        aside .informacion p:nth-child(3){
+            font-size: var(--sm);
+            color: var(--very-light-pink);
+        }
+        aside .boton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--hospital-green);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            color: var(--white);
+            width: 100%;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+            margin-top: 14px;
+        }
+        @media (max-width: 640px) {
+            aside {
+            width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <aside>
+
+        <div class="cerrar">
+            <img src="/iconos/icon_close.png" alt="cerrar">
+        </div>
+        <img class="img-producto" src="https://images.pexels.com/photos/3932930/pexels-photo-3932930.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Armario">
+        <div class="informacion">
+            <p>120,00 €</p>
+            <p>Armario</p>
+            <p>Es un armario de un estilo moderno con ocho espacios para colocar cajones</p>
+        </div>
+
+        <button class="boton">
+            <img src="/iconos/bt_add_to_cart.svg" alt="añadir al carro">
+            añadir al carrito
+        </button>
+    
+    </aside>
+
+
+</body>
+</html>
