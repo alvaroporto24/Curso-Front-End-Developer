@@ -161,6 +161,96 @@ body {
     padding-top: 0;
 }
 
+/* carrito */
+
+.cesta {
+    margin: 0 20px;
+    width: 360px;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+}
+.contenedor-cesta {
+    display: grid;
+    width: 360px;
+    grid-template-rows: auto 1fr auto;
+    align-items: center;
+}
+.contenedor-cesta .titulo{
+    display: flex;
+}
+.contenedor-cesta .titulo img {
+    margin-right: 12px;
+    transform: rotate(180deg);
+}
+.contenedor-cesta .titulo p{
+    font-size: var(--lg);
+    font-weight: bold;
+
+}
+.contenido-cesta {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    background-color: var(--text-input-field);
+    border-radius: 10px;
+    padding: 0 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.contenido-cesta p:nth-child(1){
+    display: flex;
+    flex-direction: column;
+}
+.contenido-cesta p:nth-child(2){
+    text-align: end;
+    font-weight: bold;
+}
+.contenido-cesta p span:nth-child(1){
+    font-size: var(--md);
+    font-weight: bold;
+}
+.contenido-cesta p span:nth-child(2){
+    font-size: var(--sm);
+    color: var(--very-light-pink);
+}
+.product-card {
+    display: grid;
+    grid-template-columns: auto  auto 1fr auto;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+.product-card figure{
+    margin: 0;
+}
+.product-card img:nth-child(1){
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.product-card p:nth-child(2) {
+    color: var(--very-light-pink);
+}
+.product-card p:nth-child(3) {
+    font-size: var(--md);
+    font-weight: bold;
+    text-align: end;
+}
+.contenedor-cesta .comprar {
+    background-color: var(--hospital-green);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--white);
+    width: 100%;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+    margin-top: 14px;
+}
+
  /* Mediacueries */
 
 @media (max-width: 640px) {
@@ -175,6 +265,10 @@ body {
     }
     .menuDesktop {
         display: none;
+    }
+    body .cesta {
+        position: relative;
+        margin: 0 auto;
     }
 }
 
