@@ -1,0 +1,143 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --very-light-pink: #c7c7c7;
+    --text-input-field:#f7f7f7;
+    --hospital-green: #acd9b2;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+}
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+}
+
+/* para desabilitar partes del codigo */
+.inactive {
+    display: none;
+}
+
+/* Barra de navegacion */
+.barraNav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--very-light-pink);
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+.barraNav .menu {
+    display: none;
+}
+.barraNav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+.barraNav li {
+    list-style: none;
+    display: flex;
+}
+.barraNav a {
+    text-decoration: none;
+    color: var(--black);
+}
+.barraNav .izquierda {
+    display: flex;
+}
+.barraNav .izquierda ul {
+    align-items: center;
+}
+.barraNav .izquierda img {
+    padding-right: 30px;
+}
+.barraNav .izquierda li a{
+    color: var(--very-light-pink);
+    font-size: var(--md);
+    border: 1px solid var(--white);
+    padding: 2px 8px;
+}
+.barraNav .izquierda li a:hover {
+    color: var(--hospital-green);
+    border: 1px solid var(--hospital-green);
+    border-radius: 10px;
+}
+.barraNav .derecha {
+    display: flex;
+    align-items: center;
+}
+.barraNav .derecha li a{
+    padding-right: 10px;
+    margin-top: 4px;
+}
+.barraNav .derecha li:nth-child(1) {
+    font-size: var(--sm);
+}
+.barraNav .derecha li div{
+    text-align: center;
+    width: 10px;
+    height: 10px;
+    color: var(--white);
+    background-color: var(--hospital-green);
+    border-radius: 50px;
+    padding: 1px;
+    font-size: xx-small;
+}
+
+
+/* Menu desktop */
+
+.menuDesktop {
+    position: absolute;
+    top: 58px;
+    right: 75px;
+    background: var(--white);
+    border: 1px solid var(--very-light-pink);
+    border-radius: 8px;
+    height: auto;
+    width: 100px;
+    padding: 10px;
+}
+.menuDesktop ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.menuDesktop ul li {
+    padding: 0;
+    text-align: end;
+}
+.menuDesktop ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--black);
+    font-size: var(--md);
+}
+.menuDesktop ul li:nth-child(1),
+.menuDesktop ul li:nth-child(2) {
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+.menuDesktop ul li:last-child a{
+    color: var(--hospital-green);
+    padding-top: 20px;
+    font-size: var(--sm);
+    border-top: 1px solid var(--very-light-pink);
+}
+
+
+
+ /* Mediacueries */
+
+@media (max-width: 640px) {
+    nav .menu {
+        display: block;
+    }
+    .izquierda ul{
+        display: none;
+    }
+    .derecha li:nth-child(1) {
+        display: none;
+    }   
+}
