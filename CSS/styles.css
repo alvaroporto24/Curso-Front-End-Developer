@@ -164,11 +164,14 @@ body {
 /* carrito */
 
 .cesta {
-    margin: 0 20px;
     width: 360px;
-    height: 100vh;
+    height: auto;
     position: absolute;
     right: 0;
+    background: var(--white);
+    padding: 10px;
+    border: 2px solid var(--very-light-pink);
+    border-radius:  0 0 20px 20px;
 }
 .contenedor-cesta {
     display: grid;
@@ -214,26 +217,26 @@ body {
     font-size: var(--sm);
     color: var(--very-light-pink);
 }
-.product-card {
+.product-card-carrito {
     display: grid;
     grid-template-columns: auto  auto 1fr auto;
     gap: 16px;
     margin-bottom: 24px;
     align-items: center;
 }
-.product-card figure{
+.product-card-carrito figure{
     margin: 0;
 }
-.product-card img:nth-child(1){
+.product-card-carrito img:nth-child(1){
     width: 70px;
     height: 70px;
     border-radius: 20px;
     object-fit: cover;
 }
-.product-card p:nth-child(2) {
+.product-card-carrito p:nth-child(2) {
     color: var(--very-light-pink);
 }
-.product-card p:nth-child(3) {
+.product-card-carrito p:nth-child(3) {
     font-size: var(--md);
     font-weight: bold;
     text-align: end;
@@ -249,6 +252,46 @@ body {
     font-weight: bold;
     height: 50px;
     margin-top: 14px;
+}
+
+/* Productos */
+
+
+.card-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    gap: 26px;
+    place-content: center;
+}
+.product-card {
+    width: 240px;
+}
+.product-card .product-img {
+    width: 100%;
+    height: 240px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-info figure {
+    margin: 0;
+    margin-top: 12px;
+}
+.product-info div p:nth-child(1) {
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+.product-info div p:nth-child(2) {
+    font-size: var(--sm);
+    color: var(--very-light-pink);
+    margin: 0;
 }
 
  /* Mediacueries */
@@ -269,6 +312,18 @@ body {
     body .cesta {
         position: relative;
         margin: 0 auto;
+    }
+    .card-container {
+        grid-template-columns: repeat(auto-fill, 140px);
+    }
+    .product-card {
+        width: 140px;
+    }
+    .product-card .product-img {
+        width: 100%;
+        height: 240px;
+        border-radius: 20px;
+        object-fit: cover;
     }
 }
 

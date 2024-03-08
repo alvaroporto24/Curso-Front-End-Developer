@@ -14,12 +14,29 @@ botonCarrito.addEventListener('click', toggleCarrito);
 
 function toggleMenuDesktop() {
     menuDesktop.classList.toggle('inactive')
+
+    cerrarPantalla(carrito);
+    cerrarPantalla(menuMovil);
 }
 
 function toggleMenuMovil() {
     menuMovil.classList.toggle('inactive')
+
+    cerrarPantalla(carrito);
+    cerrarPantalla(menuDesktop);
 }
 
 function toggleCarrito() {
     carrito.classList.toggle('inactive')
+
+    cerrarPantalla(menuDesktop);
+    cerrarPantalla(menuMovil);
+}
+
+function cerrarPantalla(pantalla) {
+    // si no tiene la clase inactive, ponsela.
+    if(!pantalla.classList.contains('inactive')){
+
+        pantalla.classList.add('inactive')
+    }
 }
