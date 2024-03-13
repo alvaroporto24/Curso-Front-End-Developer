@@ -9,16 +9,25 @@ const botonCarrito = document.querySelector('.carrito')
 const carrito = document.querySelector('.cesta')
 
 const cardContainer = document.querySelector('.card-container')
+// const productCard = document.querySelector('.product-card');
+const productDetail = document.querySelector('.product-detail');
+const cerrarProductDetail = document.querySelector('.cerrar');
 
 emailMenu.addEventListener('click', toggleMenuDesktop);
 botonMenuMovil.addEventListener('click', toggleMenuMovil);
 botonCarrito.addEventListener('click', toggleCarrito);
+cardContainer.addEventListener('click', MostrarDetallesProducto);
+cerrarProductDetail.addEventListener('click', cerrarDetallesProducto);
+
+
 
 function toggleMenuDesktop() {
     menuDesktop.classList.toggle('inactive')
 
     cerrarPantalla(carrito);
     cerrarPantalla(menuMovil);
+    cerrarPantalla(productDetail);
+
 }
 
 function toggleMenuMovil() {
@@ -26,6 +35,8 @@ function toggleMenuMovil() {
 
     cerrarPantalla(carrito);
     cerrarPantalla(menuDesktop);
+    cerrarPantalla(productDetail);
+
 }
 
 function toggleCarrito() {
@@ -33,6 +44,21 @@ function toggleCarrito() {
 
     cerrarPantalla(menuDesktop);
     cerrarPantalla(menuMovil);
+    cerrarPantalla(productDetail);
+}
+
+function MostrarDetallesProducto() {
+    productDetail.classList.remove('inactive')
+
+    cerrarPantalla(menuDesktop);
+    cerrarPantalla(menuMovil);
+    cerrarPantalla(carrito);
+
+}
+
+function cerrarDetallesProducto() {
+    productDetail.classList.add('inactive')
+
 }
 
 function cerrarPantalla(pantalla) {
@@ -42,6 +68,7 @@ function cerrarPantalla(pantalla) {
         pantalla.classList.add('inactive')
     }
 }
+
 
 let productList = [];
 productList.push({
